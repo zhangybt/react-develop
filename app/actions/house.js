@@ -3,10 +3,10 @@ import {
 } from 'redux-actions'
 import {
   house,
-} from 'api'
+} from '../api'
 import {
   createAjaxAction,
-} from 'utils'
+} from '../utils'
 
 
 export const requestHouseCheckList = createAction('request houseCheck list');

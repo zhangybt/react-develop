@@ -11,7 +11,7 @@ global.document = require('jsdom').jsdom('<body></body>')
 global.window = document.defaultView
 global.navigator = window.navigator
 global.$GLOBALCONFIG = {
-  $ctx: 'http://localhost:3000',
+  $ctx: 'http://localhost:8080',
   STAFF: {
     code: '01188',
     name: '黄日天',
