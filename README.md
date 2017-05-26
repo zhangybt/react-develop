@@ -37,7 +37,7 @@ npm run lint
 + client.js是入口js  
 + routes.js  定义路由的js  目前的验证登录放在路由里面做了 
 + utils里面就是一些常用的功能的封装  比如发送的ajax请求
-+ actions、API、reducers这几个文件夹  是redux的用来处理跟后端交互的文件 比如实有房屋打开这个页面打开控制台会看到发送了一个ajax请求  这些请求都是post形式的噢
++ actions、API、reducers这几个文件夹  是redux的用来处理跟后端交互的文件 比如实有房屋打开这个页打开面控制台会看到发送了一个ajax请求  这些请求都是post形式的噢
 
 + pages：存放的是我们的大部分业务文件
 + components：存放的是公用的一些组件  可以理解为jQuery框架的jQuery插件

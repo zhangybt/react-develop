@@ -8,6 +8,7 @@
   <div class="root" id="root"></div>
   <script>
     window.$GLOBALCONFIG = {};
+    //“+”或者其他一元运算符放在函数前面，目的是告诉解析器在这些特定操作符附近的是一个表达式
     +function(global){
 
           // 本地开发打开的路径以及端口
@@ -15,7 +16,7 @@
 
           global.CTI_SERVER_IP = "210.14.88.129";
 
-          // 用户登出URL
+          // 用户登出URL,这个url是干啥用的？
           global.LOGOUT_URL = "http://192.168.1.177:9043/logout?service=http%3A%2F%2F192.168.1.177%3A9043%3Fservice%3Dhttp%3A%2F%2F192.168.1.188%3A19480%2F";
 
           // 用户登录信息
@@ -36,7 +37,7 @@
                   "icon": "picture",
                   "url":"",
                   "children":[
-                      { "id":600110131, "name":"用户管理（管理）", "url":"userManage" },
+                      { "id":600110131, "name":"用户管理（管理）", "url":"userManage" },//这个userManage是js文件的路径么？
                       { "id":600110132, "name":"用户关系（查看）", "url":"userRelation" }
                   ]
               },

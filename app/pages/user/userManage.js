@@ -67,7 +67,7 @@ export default class houseCheckList extends Component {
         value: 'code',
         text: 'mean',
         label: '管辖单位',
-        type: 'defaultMultiSelect',
+        type: 'select',
         options: config.ADMINISTRATIVE_DIVISION,
       },
       {
@@ -149,11 +149,11 @@ export default class houseCheckList extends Component {
       },
     ]
   }
-
+//缓存更改的搜索条件字段
   cacheSearch(item) {
     this.props.dispatch(updateHouseCheckListQuery(item))
   }
-
+//异步处理，搜索列表
   tableData() {
     return this.props.houseCheckSearchQuery.list
   }
