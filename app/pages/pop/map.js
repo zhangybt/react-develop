@@ -14,49 +14,49 @@ import Map from 'components/AMap/amap'
 export default class popCheck extends Component {
   constructor(props) {
     super(props)
-    this.state = {
+    this.state = { 
       passwordDirty: false,
-      markers: [],
+      markers: [] ,
     }
     this._handleMapComplete = this._handleMapComplete.bind(this)
     this.btnClick = this.btnClick.bind(this)
   }
 
   componentDidMount() {
-
+    
   }
 
-  btnClick(e) {
+  btnClick(e){
     console.log()
   }
 
-  _handleMapComplete() {
+  _handleMapComplete(){
     this.map = this.mapRef._map
     const map = this.map
     // console.log(map)
 
-    const lnglats = [
+    var lnglats = [
         [116.368904, 39.923423],
         [116.382122, 39.921176],
         [116.387271, 39.922501],
-        [116.398258, 39.914600],
+        [116.398258, 39.914600]
     ];
-    const infoWindow = new AMap.InfoWindow({ offset: new AMap.Pixel(0, -30) });
-    const markers = []
+    var infoWindow = new AMap.InfoWindow({offset: new AMap.Pixel(0, -30)});
+    let markers = []
     for (var i = 0, marker; i < lnglats.length; i++) {
-      var marker = new AMap.Marker({
-        position: lnglats[i],
-        map: map,
-      });
-      marker.content = '<div id="infoWindow' + i + '">我是第' + (i + 1) + '个Marker' + '<Button>按钮事件</Button></div>';
-      marker.on('click', markerClick);
-      marker.emit('click', { target: marker });
-
-
-      markers.push(marker)
+        var marker = new AMap.Marker({
+            position: lnglats[i],
+            map: map
+        });
+        marker.content = '<div id="infoWindow'+i+'">我是第' + (i + 1) + '个Marker' + '<Button>按钮事件</Button></div>';
+        marker.on('click', markerClick);
+        marker.emit('click', {target: marker});
+        
+        
+        markers.push(marker)
     }
     this.setState({
-      markers: markers,
+      markers: markers
     }, () => {
       this.state.markers.map((item, index) => {
         item.on('click', () => {
@@ -65,28 +65,31 @@ export default class popCheck extends Component {
               React入门教程
               <Button onClick={handleMarkderClick.bind(this, index)}> hahahah</Button>
             </div>,
-            document.getElementById('infoWindow' + index)
+            document.getElementById("infoWindow" + index)
           )
         })
       })
     })
-    function handleMarkderClick(e, a) {
+    function handleMarkderClick(e, a){
       console.log(e)
       console.log(a)
     }
     function markerClick(e) {
-      infoWindow.setContent(e.target.content);
-      infoWindow.open(map, e.target.getPosition());
+        infoWindow.setContent(e.target.content);
+        infoWindow.open(map, e.target.getPosition());
+        
     }
     map.setFitView();
+
+    
   }
 
-
+  
   render() {
     return (
       <Panel>
-        <Map ref={r => this.mapRef = r}
-          id="mapContainer"
+        <Map ref={r => this.mapRef = r} 
+          id="mapContainer" 
           style={{ width: '100%', height: '700px' }}
           options={{ zoom: 10 }}
           events={{ complete: this._handleMapComplete }}

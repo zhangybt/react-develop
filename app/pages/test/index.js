@@ -16,22 +16,24 @@ import Sub from './sub'
 export default class popCheck extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      show: true,
+    this.state = { 
+      show: true
     }
   }
 
   componentDidMount() {
-
+    
 
   }
 
 
+
+  
   render() {
     return (
       <Panel>
         测试
-        <Sub />
+        <Sub/>
       </Panel>
     )
   }

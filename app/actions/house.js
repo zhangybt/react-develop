@@ -8,7 +8,7 @@ import {
   createAjaxAction,
 } from 'utils'
 
-//export提供接口，供其他地方import用
+
 export const requestHouseCheckList = createAction('request houseCheck list');
 export const recevieHouseCheckList = createAction('receive houseCheck list');
 export const fetchHouseCheckList = createAjaxAction(

@@ -5,6 +5,7 @@ import Panel from 'components/panel'
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button } from 'antd'
 
 
+
 @connect(
     (state, props) => ({
       config: state.config,
@@ -14,20 +15,20 @@ import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Butto
 export default class popCheck extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-
+    this.state = { 
+      
     }
   }
 
   componentDidMount() {
-
+    
   }
 
 
   handleClick() {
-
+    
   }
-
+  
   render() {
     return (
       <div>

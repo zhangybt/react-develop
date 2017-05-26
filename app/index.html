@@ -2,45 +2,34 @@
 <html lang="cn">
 <head>
     <meta charset="utf-8">
-    <title>用户管理中心</title>
+    <title>肚皮叔</title>
 </head>
 <body>
   <div class="root" id="root"></div>
   <script>
     window.$GLOBALCONFIG = {};
-    //“+”或者其他一元运算符放在函数前面，目的是告诉解析器在这些特定操作符附近的是一个表达式
     +function(global){
 
           // 本地开发打开的路径以及端口
-          global.$ctx = "http://localhost:8080";
+          global.$ctx = "http://localhost:3000";
 
           global.CTI_SERVER_IP = "210.14.88.129";
 
-          // 用户登出URL,这个url是干啥用的？
+          // 用户登出URL
           global.LOGOUT_URL = "http://192.168.1.177:9043/logout?service=http%3A%2F%2F192.168.1.177%3A9043%3Fservice%3Dhttp%3A%2F%2F192.168.1.188%3A19480%2F";
 
           // 用户登录信息
           global.STAFF = {
               code: 'admin',
-              name: '张衍斌',
+              name: '黄焖鸡',
               "previousLoginTime":"2016-08-01 3:11:29",
               "previousLoginIp":"192.168.1.12",
               "previousLoginCity":"",
               "id":"43"
           };
           
-          // 系统一一级菜单
+          // 系统一二级菜单
           global.NAVIGATION = [
-              {
-                  "id":600110130,
-                  "name":"用户管理",
-                  "icon": "picture",
-                  "url":"",
-                  "children":[
-                      { "id":600110131, "name":"用户管理（管理）", "url":"userManage" },//这个userManage是js文件的路径么？
-                      { "id":600110132, "name":"用户关系（查看）", "url":"userRelation" }
-                  ]
-              },
               
               {
                   "id":600110230,

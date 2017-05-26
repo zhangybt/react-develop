@@ -1,42 +1,32 @@
 import {
-    routerReducer as routing,
+  routerReducer as routing,
 } from 'react-router-redux'
 import {
-    combineReducers,
+  combineReducers,
 } from 'redux'
 
 import tabListResult from './tabList'
 
-//user
-import {
-    userSearchResult,
-    userSearchQuery,
-    userDetailResult,
-} from './user'
 // house
 import {
-    houseCheckSearchResult,
-    houseCheckSearchQuery,
-    houseDetailResult,
+  houseCheckSearchResult,
+  houseCheckSearchQuery,
+  houseDetailResult,
 } from './house'
 import {
-    loginResponse,
+  loginResponse,
 } from './common'
 
 const rootReducer = combineReducers({
-    routing,
-    config: (state = {}) => state,
-    tabListResult,
+  routing,
+  config: (state = {}) => state,
+  tabListResult,
 
-    loginResponse,
+  loginResponse,
 
-    houseCheckSearchResult,
-    houseCheckSearchQuery,
-    houseDetailResult,
-
-    userSearchResult,
-    userSearchQuery,
-    userDetailResult,
+  houseCheckSearchResult,
+  houseCheckSearchQuery,
+  houseDetailResult,
 
 
 });

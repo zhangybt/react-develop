@@ -14,18 +14,6 @@ import App from './containers/App'
 
 // import popCheck from './pages/pop/index'
 
-const userRelation = (location, cb) => {
-  require.ensure([], require => {
-    cb(null, require('./pages/user/userRelation').default)
-  }, 'userRelation')
-}
-
-const userManage = (location, cb) => {
-  require.ensure([], require => {
-    cb(null, require('./pages/user/userManage').default)
-  }, 'userManage')
-}
-
 const houseCheck1 = (location, cb) => {
   require.ensure([], require => {
     cb(null, require('./pages/house/houseCheck').default)
@@ -79,9 +67,6 @@ const routes = (
     <Route path="/" component={App}>
 
 
-      <Route path="/userRelation" getComponent={userRelation} />
-      <Route path="/userManage" getComponent={userManage} />
-
       <Route path="/houseCheck" getComponent={houseCheck1} />
       <Route path="/houseManage" getComponent={houseManage1} />
       <Route path="/houseDetail/:houseId" getComponent={houseDetail1} />
@@ -93,7 +78,7 @@ const routes = (
       <Route path="/test" getComponent={test} />
 
     </Route>
-    <Route path="/login" getComponent={Login1} />
+    <Route path="/login" getComponent={Login1}></Route>
   </Route>
 );
 
