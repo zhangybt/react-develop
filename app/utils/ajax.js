@@ -19,7 +19,7 @@ export function fetchJSON(url, params) {
     },
   }
   // eslint-disable-next-line no-param-reassign
-  url = `${API_PREFIX}${url}${API_SUFFIX}`
+  url = `${API_PREFIX}${url}`
   return fetch(url, params)
 }
 function buildParams(obj) {
@@ -42,7 +42,7 @@ export const fetchJSONByPost = url => query => {
     method: 'POST',
     body: buildParams(query),
   }
-  return fetchJSON(url, params)
+  return fetchJSON(url, params).then(res => res.json())
 }
 
 export const fetchJSONStringByPost = url => query => {
